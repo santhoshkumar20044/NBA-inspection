@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Averix Creative Studio - NIZHARA | Tamil 3D Animated Film</title>
+    <meta name="description" content="Averix Creative Studio - Building India's next great animation studio. NIZHARA - An original Tamil 3D animated fantasy film by Santhosh Kumar.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e3c72;
+            --secondary-color: #2a5298;
+            --accent-color: #ffd700;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('images/nizhara-hero.jpg') center/cover;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 1rem auto;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .highlight-box {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Movie Section */
+        .movie {
+            background: var(--bg-light);
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .movie-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .movie-info h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .movie-details {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .movie-details li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+        }
+
+        .movie-details li strong {
+            color: var(--primary-color);
+            min-width: 120px;
+        }
+
+        .story-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* Characters Section */
+        .characters {
+            background: white;
+        }
+
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .character-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .character-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .character-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .character-info {
+            padding: 1.5rem;
+        }
+
+        .character-info h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .character-info .role {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Journey Timeline */
+        .journey {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .journey .section-title {
+            color: white;
+        }
+
+        .journey .section-title::after {
+            background: var(--accent-color);
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-item h4 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* MSME Section */
+        .msme {
+            background: white;
+            text-align: center;
+        }
+
+        .certificate-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 15px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .certificate-container h3 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .certificate-img {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        /* Technology Section */
+        .technology {
+            background: var(--bg-light);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .tech-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .tech-card ul {
+            list-style: none;
+        }
+
+        .tech-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tech-card li:before {
+            content: "✓ ";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* ECE Section */
+        .ece {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .ece .section-title {
+            color: white;
+        }
+
+        .ece-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .ece-content h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .ece-content ul {
+            list-style: none;
+        }
+
+        .ece-content li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .ece-content li:before {
+            content: "✓ ";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Distribution Section */
+        .distribution {
+            background: white;
+        }
+
+        .platforms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .platform {
+            background: var(--bg-light);
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .platform h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Team Section */
+        .team {
+            background: var(--bg-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card .role {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background: white;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .achievement-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Future Vision */
+        .future {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .future .section-title {
+            color: white;
+        }
+
+        .future .section-title::after {
+            background: var(--accent-color);
+        }
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .roadmap-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .roadmap-item h4 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* College Support */
+        .college {
+            background: white;
+            text-align: center;
+        }
+
+        .college-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .college-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .college-content p {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Contact/Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-content h3 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .demo-section h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .qr-codes {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .qr-code {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .qr-code p {
+            color: var(--text-dark);
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about-grid,
+            .movie-grid,
+            .ece-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .qr-codes {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="https://averixcreativestudio.in/" class="logo">AVERIX</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Founder</a></li>
+                <li><a href="#company">Company</a></li>
+                <li><a href="#movie">NIZHARA</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#msme">MSME</a></li>
+                <li><a href="#tech">Technology</a></li>
+                <li><a href="#distribution">Distribution</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#future">Future</a></li>
+                <li><a href="#college">College</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </nav>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>AVERIX CREATIVE STUDIO</h1>
+            <p class="tagline">"Building India's Next Great Animation Studio"</p>
+            <p>From ECE Student to Animation Entrepreneur in 6 Months</p>
+            <div>
+                <a href="#movie" class="btn">Watch Trailer</a>
+                <a href="#about" class="btn btn-secondary">Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Founder Profile -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About The Founder</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/founder.jpg" alt="Santhosh Kumar - Founder">
+                </div>
+                <div class="about-content">
+                    <h3>Santhosh Kumar G</h3>
+                    <p><strong>Education:</strong> B.E. Electronics & Communication Engineering</p>
+                    <p><strong>Graduation:</strong> June 2026</p>
+                    <p><strong>College:</strong> Shanmugha College of Engineering and Technology</p>
+                    <p><strong>PAN:</strong> SJVPS4516M</p>
+                    <p><strong>Role:</strong> Founder, CEO & Director - Averix Creative Studio</p>
+                    <p style="margin-top: 1.5rem; font-style: italic; color: var(--text-light);">
+                        "My dream is to build India's premier 3D animation studio, 
+                        bringing Walt Disney-level quality to original Indian stories."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Company Overview -->
+    <section id="company" class="company">
+        <div class="container">
+            <h2 class="section-title">Company Overview</h2>
+            <div class="highlight-box" style="max-width: 800px; margin: 0 auto;">
+                <h4>🏢 AVERIX CREATIVE STUDIO</h4>
+                <p><strong>Founded:</strong> January 2026 (6 months ago)</p>
+                <p><strong>Registration:</strong> MSME Registered - UDYAM-TN-14-0102227</p>
+                <p><strong>Date of Registration:</strong> 24/01/2026</p>
+                <p><strong>Type:</strong> Micro Enterprise (Proprietary)</p>
+                <p><strong>Sector:</strong> 3D Animation & Film Production</p>
+                <p><strong>Address:</strong> 3/11, Pudur Kudi Street, Tiruchengodu, Namakkal - 637205</p>
+                <p><strong>Vision:</strong> To create world-class Indian animated content comparable to Walt Disney Studios</p>
+                <p><strong>Mission:</strong> Bringing Tamil stories to global audiences through cutting-edge 3D animation technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Journey Timeline -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <h2 class="section-title">My Journey: Balancing Academics & Entrepreneurship</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>January 2026</h4>
+                    <p>Started company while in final semester (23/01/2026). Worked on projects after college hours. Built initial concept.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>February-March 2026</h4>
+                    <p>Continued 8th semester classes. Built initial team & concept development. Daily college work → Evening studio work.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>April-May 2026</h4>
+                    <p>Final exams preparation. Pre-production work on weekends. Character design completion.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>June 2026</h4>
+                    <p>Completed ECE degree. Full-time focus on Averix Studio. MSME Registration completed.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>July 2026</h4>
+                    <p>Trailer Release. IMDb Registration. NBA Presentation. Website Launch.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>September 2026</h4>
+                    <p><strong>🎬 NIZHARA Theatrical Release</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Movie Section -->
+    <section id="movie" class="movie">
+        <div class="container">
+            <h2 class="section-title">NIZHARA - Our Flagship Project</h2>
+            <div class="movie-grid">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/xICcr0Opy-E" 
+                        title="NIZHARA Official Trailer" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="movie-info">
+                    <h3>Movie Details</h3>
+                    <ul class="movie-details">
+                        <li><strong>Genre:</strong> 3D Animated Fantasy</li>
+                        <li><strong>Language:</strong> Tamil</li>
+                        <li><strong>Format:</strong> Feature Film (Original IP)</li>
+                        <li><strong>Status:</strong> In Production</li>
+                        <li><strong>Release:</strong> September 2026</li>
+                        <li><strong>Director:</strong> Santhosh Kumar</li>
+                        <li><strong>IMDb:</strong> Registered & Listed</li>
+                    </ul>
+                    <div class="story-box">
+                        <h4>📖 Story</h4>
+                        <p>A mother's brave journey across an endless ocean to reunite with her lost son. An original Tamil 3D animated fantasy film with international quality standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Project Status -->
+    <section class="status">
+        <div class="container">
+            <h2 class="section-title">Project Status & Milestones</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h4>✅ COMPLETED</h4>
+                    <ul>
+                        <li>Concept & Story Development</li>
+                        <li>Character Design (6 Characters)</li>
+                        <li>Script Writing</li>
+                        <li>Trailer Release</li>
+                        <li>MSME Registration</li>
+                        <li>IMDb Registration</li>
+                    </ul>
+                </div>
+                <div class="achievement-card">
+                    <h4>🔄 IN PROGRESS</h4>
+                    <ul>
+                        <li>Voice Recording</li>
+                        <li>Animation Production (40% complete)</li>
+                        <li>AI Music Composition</li>
+                        <li>Sound Design</li>
+                        <li>Post-Production</li>
+                    </ul>
+                </div>
+                <div class="achievement-card">
+                    <h4>📅 UPCOMING</h4>
+                    <ul>
+                        <li>Final Animation & Rendering</li>
+                        <li>Distributor Agreements</li>
+                        <li>OTT Platform Deals</li>
+                        <li>Theatrical Release (Sept 2026)</li>
+                        <li>Film Festival Submissions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. MSME Section -->
+    <section id="msme" class="msme">
+        <div class="container">
+            <h2 class="section-title">Official Registrations</h2>
+            <div class="certificate-container">
+                <h3>🏆 MSME Registered Company</h3>
+                <img src="images/msme-certificate.jpg" alt="MSME Certificate" class="certificate-img">
+                <p><strong>Udyam Registration Number:</strong> UDYAM-TN-14-0102227</p>
+                <p><strong>Government of India Certified</strong></p>
+                <p><strong>Category:</strong> Micro Enterprise - Services</p>
+                <p><strong>Date of Registration:</strong> 24/01/2026</p>
+                <p><strong>Major Activity:</strong> Motion Picture & Video Production</p>
+                <p><strong>NIC Codes:</strong> 59112 (Video Production), 73100 (Advertising), 74103 (Graphic Design)</p>
+                <div class="badges">
+                    <div class="badge">IMDb Registered</div>
+                    <div class="badge">MSME Certified</div>
+                    <div class="badge">Original IP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Characters Section - ALL 6 CHARACTERS -->
+    <section id="characters" class="characters">
+        <div class="container">
+            <h2 class="section-title">Original Characters</h2>
+            <div class="characters-grid">
+                <!-- Character 1: NIZHARA -->
+                <div class="character-card">
+                    <img src="images/character-nizhara.jpg" alt="Nizhara Character">
+                    <div class="character-info">
+                        <h3>NIZHARA</h3>
+                        <p class="role">The Mother (Protagonist)</p>
+                        <p><strong>Age:</strong> 28-32 years</p>
+                        <p><strong>Traits:</strong> Brave, Determined, Loving</p>
+                        <p><strong>Design:</strong> Realistic 3D with Indian features, traditional Tamil attire with fantasy elements</p>
+                    </div>
+                </div>
+
+                <!-- Character 2: ATLIX -->
+                <div class="character-card">
+                    <img src="images/character-atlix.jpg" alt="Atlix Character">
+                    <div class="character-info">
+                        <h3>ATLIX</h3>
+                        <p class="role">The Young Son (Hero)</p>
+                        <p><strong>Age:</strong> 6-8 years</p>
+                        <p><strong>Traits:</strong> Innocent, Curious, Resilient</p>
+                        <p><strong>Design:</strong> Cute, expressive features with magical connection to the ocean</p>
+                    </div>
+                </div>
+
+                <!-- Character 3: NIMORA -->
+                <div class="character-card">
+                    <img src="images/character-nimora.jpg" alt="Nimora Character">
+                    <div class="character-info">
+                        <h3>NIMORA</h3>
+                        <p class="role">Father of Atlix</p>
+                        <p><strong>Age:</strong> 30-35 years</p>
+                        <p><strong>Traits:</strong> Wise, Protective, Strong</p>
+                        <p><strong>Design:</strong> Majestic warrior with traditional armor and noble features</p>
+                    </div>
+                </div>
+
+                <!-- Character 4: KYARA -->
+                <div class="character-card">
+                    <img src="images/character-kyara.jpg" alt="Kyara Character">
+                    <div class="character-info">
+                        <h3>KYARA</h3>
+                        <p class="role">Sister of Atlix</p>
+                        <p><strong>Age:</strong> 10-12 years</p>
+                        <p><strong>Traits:</strong> Intelligent, Caring, Brave</p>
+                        <p><strong>Design:</strong> Young girl with traditional Tamil dress and mystical accessories</p>
+                    </div>
+                </div>
+
+                <!-- Character 5: LYARA -->
+                <div class="character-card">
+                    <img src="images/character-lyara.jpg" alt="Lyara Character">
+                    <div class="character-info">
+                        <h3>LYARA</h3>
+                        <p class="role">Sister of Atlix</p>
+                        <p><strong>Age:</strong> 8-10 years</p>
+                        <p><strong>Traits:</strong> Playful, Creative, Kind</p>
+                        <p><strong>Design:</strong> Cheerful young girl with ocean-inspired jewelry and colorful attire</p>
+                    </div>
+                </div>
+
+                <!-- Character 6: CHIKA -->
+                <div class="character-card">
+                    <img src="images/character-chika.jpg" alt="Chika Character">
+                    <div class="character-info">
+                        <h3>CHIKA</h3>
+                        <p class="role">Atlix's Guardian (Armor)</p>
+                        <p><strong>Type:</strong> Magical Guardian/Mystical Armor</p>
+                        <p><strong>Traits:</strong> Loyal, Powerful, Protective</p>
+                        <p><strong>Design:</strong> Enchanted armor with Tamil mythological elements and glowing mystical powers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Technology Section -->
+    <section id="tech" class="technology">
+        <div class="container">
+            <h2 class="section-title">Production Technology</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>🎨 3D Animation Software</h4>
+                    <ul>
+                        <li>Blender / Maya (3D Modeling & Animation)</li>
+                        <li>ZBrush (Character Sculpting)</li>
+                        <li>Substance Painter (Texturing)</li>
+                        <li>Cycles / Arnold Renderer</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>🤖 AI-Powered Tools</h4>
+                    <ul>
+                        <li>AI Music Composition (AIVA/Soundraw)</li>
+                        <li>AI Sound Design & Effects</li>
+                        <li>AI-Assisted Animation</li>
+                        <li>Cinematic Background Creation</li>
+                        <li>Photogrammetry for environments</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>🎬 Post-Production</h4>
+                    <ul>
+                        <li>Adobe Premiere Pro</li>
+                        <li>After Effects</li>
+                        <li>DaVinci Resolve</li>
+                        <li>Cloud Rendering Services</li>
+                        <li>AI-enhanced texture generation</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4> Production Pipeline</h4>
+                    <ul>
+                        <li>Pre-production Planning</li>
+                        <li>Storyboard & Animatics</li>
+                        <li>3D Modeling & Rigging</li>
+                        <li>Animation & Lighting</li>
+                        <li>Rendering & Compositing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Distribution Section -->
+    <section id="distribution" class="distribution">
+        <div class="container">
+            <h2 class="section-title">Release & Distribution Strategy</h2>
+            <div class="platforms">
+                <div class="platform">
+                    <h4>🎬 Theatrical</h4>
+                    <p>September 2026</p>
+                    <p>Tamil Nadu</p>
+                </div>
+                <div class="platform">
+                    <h4>📺 Amazon Prime</h4>
+                    <p>Post-Theatrical</p>
+                    <p>OTT Release</p>
+                </div>
+                <div class="platform">
+                    <h4>🎥 Netflix</h4>
+                    <p>Licensing Deal</p>
+                    <p>Global Platform</p>
+                </div>
+                <div class="platform">
+                    <h4>📱 Disney+ Hotstar</h4>
+                    <p>Streaming</p>
+                    <p>Indian Market</p>
+                </div>
+                <div class="platform">
+                    <h4>🎪 Film Festivals</h4>
+                    <p>International</p>
+                    <p>Animation Circuit</p>
+                </div>
+                <div class="platform">
+                    <h4> Film Hub</h4>
+                    <p>Distributors</p>
+                    <p>Regional & National</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Team Structure</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <h4>Santhosh Kumar G</h4>
+                    <p class="role">Founder/CEO/Director</p>
+                    <p>Overall vision, direction, and production management</p>
+                </div>
+                <div class="team-card">
+                    <h4>Core Team</h4>
+                    <p class="role">1 Member</p>
+                    <p>Founder-led production with specialized freelance support</p>
+                </div>
+                <div class="team-card">
+                    <h4>Academic Advisors</h4>
+                    <p class="role">Mentors</p>
+                    <p>ECE Department Faculty - Shanmugha College</p>
+                </div>
+                <div class="team-card">
+                    <h4>Future Hiring</h4>
+                    <p class="role">Post-Release</p>
+                    <p>10 Animators, 5 Story Artists, 3 Technical Directors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">6-Month Journey Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h4>January 2026</h4>
+                    <p>✓ Company Registration (23/01/2026)<br>✓ Concept Finalization<br>✓ Team Assembly</p>
+                </div>
+                <div class="achievement-card">
+                    <h4>March 2026</h4>
+                    <p>✓ Character Design Completion (6 Characters)<br>✓ Script Writing<br>✓ First Animation Test</p>
+                </div>
+                <div class="achievement-card">
+                    <h4>May 2026</h4>
+                    <p>✓ MSME Registration (24/01/2026)<br>✓ Voice Recording Started<br>✓ Production Pipeline Setup</p>
+                </div>
+                <div class="achievement-card">
+                    <h4>July 2026</h4>
+                    <p>✓ Trailer Release<br>✓ IMDb Registration<br>✓ ECE Degree Completion<br>✓ NBA Presentation<br>✓ Website Launch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Financial Overview -->
+    <section class="financial">
+        <div class="container">
+            <h2 class="section-title">Business Model & Financials</h2>
+            <div class="about-grid">
+                <div class="highlight-box">
+                    <h4>💰 Current Funding</h4>
+                    <p><strong>Model:</strong> Self-funded (Bootstrapped)</p>
+                    <p><strong>Initial Investment:</strong> ₹[Amount]</p>
+                    <p><strong>MSME Benefits:</strong> Government subsidies availed</p>
+                    <p><strong>Bank:</strong> Indian Overseas Bank</p>
+                    <p><strong>IFSC:</strong> IOBA0001827</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>💵 Revenue Streams</h4>
+                    <p>1. Theatrical Box Office</p>
+                    <p>2. OTT Platform Licensing</p>
+                    <p>3. Music & Soundtrack Rights</p>
+                    <p>4. Merchandising (Future)</p>
+                    <p>5. Sequel & Franchise (Future)</p>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h4>📈 Future Funding</h4>
+                <p>• Angel Investors (In Discussion)</p>
+                <p>• Film Production Grants</p>
+                <p>• Crowdfunding Campaign</p>
+                <p><strong>Break-even Timeline:</strong> 18-24 months post-release</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Future Vision -->
+    <section id="future" class="future">
+        <div class="container">
+            <h2 class="section-title">Roadmap: 2026-2030</h2>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <h4>2026</h4>
+                    <p>Release NIZHARA (Sept 2026)</p>
+                    <p>Establish brand presence</p>
+                    <p>Break-even operations</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>2027</h4>
+                    <p>Second film pre-production</p>
+                    <p>Web series development</p>
+                    <p>Team expansion to 20 members</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>2028</h4>
+                    <p>Release second feature film</p>
+                    <p>OTT exclusive content</p>
+                    <p>International co-productions</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>2029-2030</h4>
+                    <p>Build studio infrastructure</p>
+                    <p>Animation training academy</p>
+                    <p>Compete with international studios</p>
+                    <p>Walt Disney-level quality benchmark</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; font-size: 1.3rem;">
+                <p><strong>Long-term Vision:</strong> "Make Averix Creative Studio the most respected Indian animation brand globally"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. ECE Department Connection -->
+    <section class="ece">
+        <div class="container">
+            <h2 class="section-title">How ECE Department Shaped This Journey</h2>
+            <div class="ece-grid">
+                <div class="ece-content">
+                    <h3>🔧 Technical Skills from ECE</h3>
+                    <ul>
+                        <li>Digital Signal Processing → Audio processing for film</li>
+                        <li>Computer Fundamentals → 3D software understanding</li>
+                        <li>Programming Logic → Automation scripts for animation</li>
+                        <li>Electronics Knowledge → Understanding rendering hardware</li>
+                        <li>Project Management → Managing production pipeline</li>
+                        <li>Problem Solving → Technical challenges in animation</li>
+                    </ul>
+                </div>
+                <div class="ece-content">
+                    <h3>🎓 Department Support Received</h3>
+                    <ul>
+                        <li><strong>HOD:</strong> Dr. L. BHARATHI M.Tech., Ph.D., Professor & Head of Department</li>
+                        <li><strong>Professor:</strong> D. Vinoth AP/ECE</li>
+                        <li>Lab facilities for technical testing</li>
+                        <li>Encouragement for entrepreneurship</li>
+                        <li>Flexibility to balance academics & startup</li>
+                        <li>Guidance on MSME registration</li>
+                        <li>Moral support for creative pursuits</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Program Outcomes Achieved</h4>
+                <p>PO7 (Environment & Sustainability) | PO8 (Ethics) | PO9 (Individual & Team Work) | PO10 (Communication) | PO11 (Project Management) | PO12 (Lifelong Learning)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. College Support -->
+    <section id="college" class="college">
+        <div class="container">
+            <h2 class="section-title">Acknowledgments</h2>
+            <div class="college-content">
+                <h3>Special Thanks To</h3>
+                <p><strong>Shanmugha College of Engineering and Technology - ECE Department:</strong><br>
+                <strong>Dr. L. BHARATHI M.Tech., Ph.D.</strong> - Professor & Head of the Department<br>
+                <strong>D. Vinoth</strong> - Assistant Professor, ECE<br>
+                All ECE Faculty - For unwavering encouragement and support</p>
+                
+                <p style="margin-top: 2rem;"><strong>College Administration:</strong><br>
+                Principal - For infrastructure support<br>
+                Management - For fostering innovation and entrepreneurship</p>
+                
+                <p style="margin-top: 2rem; font-size: 1.2rem; color: var(--primary-color);">
+                    "From a classroom in Shanmugha College to directing a Tamil 3D animated film - 
+                    this institution gave me the confidence to dream big and the skills to achieve it."
+                </p>
+                
+                <p style="margin-top: 1.5rem; font-weight: bold; color: var(--accent-color);">
+                    "This achievement belongs to Shanmugha College of Engineering and Technology - ECE Department"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. Contact & Demo Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect & Watch Demo</h3>
+                
+                <div class="demo-section">
+                    <h4>🎬 Live Demo & Trailer</h4>
+                    <p>Watch our official trailer and behind-the-scenes content</p>
+                    <div style="margin: 2rem 0;">
+                        <a href="#movie" class="btn">Watch NIZHARA Trailer</a>
+                        <a href="https://movies.averixcreativestudio.in" class="btn btn-secondary" target="_blank">Visit Our Website</a>
+                    </div>
+                </div>
+
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="images/qr-trailer.jpg" alt="Trailer QR Code">
+                        <p>Watch Trailer</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="images/qr-imdb.jpg" alt="IMDb QR Code">
+                        <p>IMDb Page</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="images/qr-website.jpg" alt="Website QR Code">
+                        <p>Our Website</p>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>AVERIX CREATIVE STUDIO</strong></p>
+                    <p><strong>Founder & Director:</strong> Santhosh Kumar G</p>
+                    <p><strong>Phone:</strong> 9360436090</p>
+                    <p><strong>Email:</strong> averixstudioofficial@gmail.com</p>
+                    <p><strong>Website:</strong> movies.averixcreativestudio.in</p>
+                    <p><strong>Address:</strong> 3/11, Pudur Kudi Street, Tiruchengodu, Namakkal - 637205</p>
+                    <p><strong>MSME:</strong> UDYAM-TN-14-0102227</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/averix_animation" target="_blank" title="Instagram">📷 Instagram</a>
+                    <a href="https://www.facebook.com/people/Averix-Ofcl/pfbid02oDAcjj7oYr4cr4dJk2sWfQz27W2ifuzwCeF7DBnfAPFQ8KHKtsUjht57wYRg6Ysol/" target="_blank" title="Facebook">👥 Facebook</a>
+                    <a href="https://www.youtube.com/embed/xICcr0Opy-E" target="_blank" title="YouTube">🎬 YouTube</a>
+                    <a href="https://www.linkedin.com/company/averix-creative-studio" target="_blank" title="LinkedIn">💼 LinkedIn</a>
+                    <a href="https://www.imdb.com/title/tt43679367/" target="_blank" title="IMDb">🎥 IMDb</a>
+                </div>
+
+                <p style="font-style: italic; margin-top: 2rem; opacity: 0.9;">
+                    "From a classroom in this college to directing a Tamil 3D animated film - 
+                    this institution gave me the confidence to dream big and the skills to achieve it."
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Averix Creative Studio. All Rights Reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    An ECE Graduate Success Story | Shanmugha College of Engineering and Technology | MSME Registered: UDYAM-TN-14-0102227
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.character-card, .timeline-item, .tech-card, .achievement-card, .roadmap-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(30, 60, 114, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+            }
+        });
+    </script>
+
+</body>
+</html>
